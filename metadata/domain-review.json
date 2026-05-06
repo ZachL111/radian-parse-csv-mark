@@ -1,0 +1,73 @@
+{
+  "repo": "radian-parse-csv-mark",
+  "language": "Ruby",
+  "category": "Parsers",
+  "goal": "Implement a Ruby parsers project for csv graph analysis, using node-edge fixtures and cycle and reachability reports.",
+  "review_model": {
+    "terms": [
+      "token drift",
+      "grammar width",
+      "label quality",
+      "error locality"
+    ],
+    "lanes": [
+      "ship",
+      "watch",
+      "hold"
+    ],
+    "score": "signal * 2 + slack + confidence - drag * 3",
+    "purpose": "surface the domain-specific cases that need the most careful review"
+  },
+  "cases": [
+    {
+      "name": "baseline",
+      "focus": "token drift",
+      "signal": 57,
+      "slack": 52,
+      "drag": 21,
+      "confidence": 45,
+      "score": 148,
+      "lane": "ship"
+    },
+    {
+      "name": "stress",
+      "focus": "grammar width",
+      "signal": 75,
+      "slack": 50,
+      "drag": 9,
+      "confidence": 57,
+      "score": 230,
+      "lane": "ship"
+    },
+    {
+      "name": "edge",
+      "focus": "label quality",
+      "signal": 85,
+      "slack": 24,
+      "drag": 11,
+      "confidence": 73,
+      "score": 234,
+      "lane": "ship"
+    },
+    {
+      "name": "recovery",
+      "focus": "error locality",
+      "signal": 74,
+      "slack": 31,
+      "drag": 29,
+      "confidence": 64,
+      "score": 156,
+      "lane": "ship"
+    },
+    {
+      "name": "stale",
+      "focus": "token drift",
+      "signal": 55,
+      "slack": 29,
+      "drag": 22,
+      "confidence": 87,
+      "score": 160,
+      "lane": "ship"
+    }
+  ]
+}
